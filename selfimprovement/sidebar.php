@@ -7,6 +7,11 @@
 ?>
 	<div id="secondary" class="widget-area" role="complementary">
 		<?php do_action( 'before_sidebar' ); ?>
+		
+		<aside id="rss" class="widget">
+			<a href="<?php bloginfo('rss2_url'); ?>" class="rss" 
+			title="Abonniere den <?php bloginfo('name'); ?>-RSS-Feed">RSS</a>
+		</aside>
 		<?php if ( ! dynamic_sidebar( 'sidebar-1' ) ) : ?>
 
 			<aside id="search" class="widget widget_search">

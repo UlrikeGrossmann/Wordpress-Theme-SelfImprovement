@@ -1,0 +1,11 @@
+@import url(http://fonts.googleapis.com/css?family=Philosopher:400,400italic,700,700italic|Felipa);
+
+body.familie {
+	font-family: 'Philosopher', Courier, sans-serif;
+}
+
+h1, h2, h3, 
+.site-title {
+	font-family: 'Felipa', 'Philosopher', cursive;
+	font-weight: normal;
+}

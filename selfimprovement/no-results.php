@@ -10,7 +10,7 @@
 
 <section class="no-results not-found">
 	<header class="page-header">
-		<h1 class="page-title"><?php _e( 'Nothing Found', 'selfimprovement' ); ?></h1>
+		<h1 class="page-title"><?php _e( 'Nicht gefunden', 'selfimprovement' ); ?></h1>
 	</header><!-- .page-header -->
 
 	<div class="page-content">
@@ -20,12 +20,12 @@
 
 		<?php elseif ( is_search() ) : ?>
 
-			<p><?php _e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'selfimprovement' ); ?></p>
+			<p><?php _e( 'Tut mir leid, aber nichts passte zu Deiner Suche. Versuche es bitte nochmal mit anderen Schlüsselworten.', 'selfimprovement' ); ?></p>
 			<?php get_search_form(); ?>
 
 		<?php else : ?>
 
-			<p><?php _e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'selfimprovement' ); ?></p>
+			<p><?php _e( 'Es scheint, das was Du suchst, wurde nicht gefunden. Versuch es mit der Suchfunktion.', 'selfimprovement' ); ?></p>
 			<?php get_search_form(); ?>
 
 		<?php endif; ?>

@@ -24,6 +24,10 @@ function selfimprovement_body_classes( $classes ) {
 	if ( is_multi_author() ) {
 		$classes[] = 'group-blog';
 	}
+	// active subdomain plugin
+	if (isset($GLOBALS['wps_this_subdomain']))	{
+		$classes[] = $GLOBALS['wps_this_subdomain']->slug; 
+	}
 
 	return $classes;
 }
@@ -68,3 +72,18 @@ function selfimprovement_wp_title( $title, $sep ) {
 	return $title;
 }
 add_filter( 'wp_title', 'selfimprovement_wp_title', 10, 2 );
+
+/**
+ *	Adds a category specific css to the header
+ */
+function selfimprovement_wp_head()
+{
+	// active subdomain plugin ?
+	if (isset($GLOBALS['wps_this_subdomain'])) {  
+		echo sprintf(
+		    "<link rel='stylesheet' id='selfimprovement-category-css'  href='%s'  type='text/css' media='all' />",
+		    get_stylesheet_directory_uri().'/' .$GLOBALS['wps_this_subdomain']->slug .'.css'
+		); 
+	}
+}
+add_action('wp_head', 'selfimprovement_wp_head');
